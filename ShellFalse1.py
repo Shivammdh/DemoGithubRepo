@@ -1,14 +1,15 @@
 import subprocess
 
 cmd='echo $HOME'
+print("subprocess running")
 sp=subprocess.Popen(cmd,shell=False,stdout=subprocess.PIPE,stderr=subprocess.PIPE,universal_newlines=True)
 time=sp.wait()
 
 out,err=sp.communicate()
-
+print("subprosess end")
 print(f'Output is:{out}')
 print(f'Error is:{err}')
-
+print("finished...")
 ''' Output:
     Traceback (most recent call last):
       File "ShellFalse1.py", line 4, in <module>
